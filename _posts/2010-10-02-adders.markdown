@@ -3,7 +3,8 @@ layout: post
 title: Half and Full Adders
 ---
 
-The following is a classic [half adder] [half adder] circuit:
+The following is a classic [half adder] [half adder] circuit, built with XOR
+and NAND gates:
 
 ![Half adder](/circuits/images/half_adder.png)
 
