@@ -1,0 +1,12 @@
+---
+layout: post
+title: Half and Full Adders
+---
+
+The following is a classic half-adder circuit:
+
+![Half adder](/images/half_adder.png)
+
+The XOR gate decides the parity of the output bit S, and the two NAND gates act
+as an AND gate for the inputs, deciding whether the carry bit Cout should be
+set.
