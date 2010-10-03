@@ -16,5 +16,8 @@ bit:
 
 ![Full adder](/circuits/images/full_adder.png)
 
+The Wikipedia article discusses a number of possibilities for deciding on the
+carry bit. This one has the virtue of using only NAND gates.
+
 [half adder]: http://en.wikipedia.org/wiki/Adder_(electronics)#Half_adder
 [full adder]: http://en.wikipedia.org/wiki/Adder_(electronics)#Full_adder
