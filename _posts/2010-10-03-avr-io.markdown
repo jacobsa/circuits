@@ -1,0 +1,16 @@
+---
+layout: post
+title: Notes on AVR I/O
+---
+
+How to hook up the cheap [AVR-ISP500 programmer] [sparkfun] I bought on
+Sparkfun (programmer/header pin to AVR pin):
+
+ *  `V_TAR` to `Vcc`
+ *  `MOSI` to `MOSI`
+ *  `GND` to `GND`
+ *  `MISO` to `MISO`
+ *  `SCK` to `SCK`
+ *  `TRST` to `RESET`
+
+[sparkfun]: http://www.sparkfun.com/commerce/product_info.php?products_id=8702
