@@ -9,8 +9,7 @@ and NAND gates:
 ![Half adder](/circuits/images/half_adder.png)
 
 The XOR gate decides the parity of the output bit S, and the two NAND gates act
-as an AND gate for the inputs, deciding whether the carry bit Cout should be
-set.
+as an AND gate for the inputs, deciding whether the carry bit should be set.
 
 Here's a [full adder] [full adder], which also deals with an incoming carry
 bit:
