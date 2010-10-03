@@ -4,6 +4,11 @@ title: Aaron Jacobs
 ---
 
 <div id="home">
+  <p>
+    I've been teaching myself electronics and needed a place to keep track of
+    the things I've learned, since I keep forgetting them. Below are write-ups
+    and diagrams of some beginner-level circuits I've dealt with.
+  </p>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="/circuits{{ post.url }}">{{ post.title }}</a></li>
