@@ -3,8 +3,8 @@ layout: post
 title: Notes on AVR I/O
 ---
 
-How to hook up the cheap [AVR-ISP500 programmer] [sparkfun] I bought on
-Sparkfun (programmer/header pin to AVR pin):
+How to hook up the cheap [AVR-ISP500 programmer] [isp500] I bought on Sparkfun
+(programmer/header pin to AVR pin):
 
  *  `V_TAR` to `Vcc`
  *  `MOSI` to `MOSI`
@@ -13,4 +13,14 @@ Sparkfun (programmer/header pin to AVR pin):
  *  `SCK` to `SCK`
  *  `TRST` to `RESET`
 
-[sparkfun]: http://www.sparkfun.com/commerce/product_info.php?products_id=8702
+ And the [FT232RL] [ft232rl] USB to serial breakout board (breakout to AVR):
+
+  *  `TXD` to `RXD`
+  *  `RXD` to `TXD`
+  *  `GND` to `GND`
+
+Note that `RXD` is connected to `TXD` and vice versa, and that the `3.3V` pin
+is left unconnected.
+
+[isp500]: http://www.sparkfun.com/commerce/product_info.php?products_id=8702
+[ft232rl]: http://www.sparkfun.com/commerce/product_info.php?products_id=718
