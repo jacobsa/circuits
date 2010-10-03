@@ -11,9 +11,9 @@ current directly from a voltage source:
 
 In the circuit above, A is the IC output. It's assumed that logical one is +5V,
 and the LED is a red one (with a 1.8 V drop and safe current of about 20 mA).
-If you switch LEDs, recalculate the value for the 180 Ω resistor using an
-[LED calculator] [led], and the 5.6 kΩ resistor using the "Choosing a suitable
-NPN transistor" section [here] [kpsec].
+If you switch LEDs or voltage levels, recalculate the value for the 180 Ω
+resistor using an [LED calculator] [led], and the 5.6 kΩ resistor using the
+"Choosing a suitable NPN transistor" section [here] [kpsec].
 
 [led]: http://led.linear1.org/1led.wiz
 [kpsec]: http://www.kpsec.freeuk.com/trancirc.htm
