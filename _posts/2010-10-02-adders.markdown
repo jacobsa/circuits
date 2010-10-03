@@ -12,5 +12,10 @@ The XOR gate decides the parity of the output bit S, and the two NAND gates act
 as an AND gate for the inputs, deciding whether the carry bit Cout should be
 set.
 
+Here's a [full adder] [full adder], which also deals with an incoming carry
+bit:
+
+![Full adder](/circuits/images/full_adder.png)
+
 [half adder]: http://en.wikipedia.org/wiki/Adder_(electronics)#Half_adder
 [full adder]: http://en.wikipedia.org/wiki/Adder_(electronics)#Full_adder
