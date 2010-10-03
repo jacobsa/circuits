@@ -15,9 +15,9 @@ How to hook up the cheap [AVR-ISP500 programmer] [isp500] I bought on Sparkfun
 
  And the [FT232RL] [ft232rl] USB to serial breakout board (breakout to AVR):
 
-  *  `TXD` to `RXD`
-  *  `RXD` to `TXD`
-  *  `GND` to `GND`
+ *  `TXD` to `RXD`
+ *  `RXD` to `TXD`
+ *  `GND` to `GND`
 
 Note that `RXD` is connected to `TXD` and vice versa, and that the `3.3V` pin
 is left unconnected.
