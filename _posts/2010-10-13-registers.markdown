@@ -13,7 +13,7 @@ out how to build the registers. They'll need to connect to an 8-bit bus, so
 that e.g. with a `mov r1, r2` instruction `r2` will own the bus, writing its
 value to it, and `r1` will latch the value on the bus. So each register board
 (I'll probably build them on separate pieces of vero) will have the following
-inputs:
+terminals:
 
  *  `D0-7` -- the lines of the bus.
 
@@ -26,7 +26,7 @@ inputs:
     Keep it low to retain the value.
 
 This seems very easy to build with a 74373 transparent latch chip like [this
-one] [farnell 373]:
+one] [74373]:
 
  *  `D0-7` are just the inputs to the IC.
 
@@ -39,4 +39,14 @@ one] [farnell 373]:
     high impedance, and when it's high you should have the register latched
     anyway.
 
-[farnell 373]: http://au.farnell.com/nxp/74hct373n/74hct-cmos-74hct373-dip20-5v/dp/382358
+The latch IC acts both as the register itself and as a bus transceiver.
+
+I think it would be cool to have each register board also contain an 8-bit LED
+display of its current value for debugging purposes, especially when I'm first
+building system. To do that the latch IC needs to always output though, which
+means I'll need a separate buffer, like the [74245 bus transceiver] [74245]. It
+seems sufficient to put the buffer between the latch IC's outputs and its
+inputs, and to connect the LEDs between the latch IC's outputs and the buffer.
+
+[74373]: http://au.farnell.com/nxp/74hct373n/74hct-cmos-74hct373-dip20-5v/dp/382358
+[74245]: http://au.farnell.com/texas-instruments/sn74hct245n/bus-transceiver-octal-74hct245/dp/9591931
