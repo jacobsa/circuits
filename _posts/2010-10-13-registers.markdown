@@ -33,10 +33,10 @@ This seems very easy to build with a [74373 transparent latch] [74373] IC:
 
  *  Attach `LATCH` to the `LE` pin on the IC.
 
- *  Connect the IC's outputs (`Q0-7`) to its inputs. If I understand correctly,
-    this won't cause any problems because when `OUTPUT` is low the outputs are
-    high impedance, and when it's high you should have the register latched
-    anyway.
+ *  Connect the IC's outputs (`Q0-7`) to its inputs (`D0-7`). If I understand
+    correctly, this won't cause any problems because when `OUTPUT` is low the
+    outputs are high impedance, and when it's high you should have the register
+    latched anyway.
 
 The latch IC acts both as the register itself and as a bus transceiver.
 
