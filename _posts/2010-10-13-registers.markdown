@@ -17,9 +17,9 @@ terminals:
 
  *  `D0-7` -- the lines of the bus.
 
- *  `OUTPUT` -- when this is high, the register owns the bus and outputs its
-    value. When it's low, the register board's outputs are in a high impedance
-    state.
+ *  `OUTPUT` (active low) -- when this is low, the register owns the bus and
+    outputs its value. When it's high, the register board's outputs are in a
+    high impedance state.
 
  *  `LATCH` -- when you want to write to the register, ensure the bus contains
     the appropriate value and then bring this momentarily high, then low again.
@@ -29,7 +29,7 @@ This seems very easy to build with a [74373 transparent latch] [74373] IC:
 
  *  `D0-7` are just the inputs to the IC.
 
- *  Invert `OUTPUT` and attach its value to the active-low `OE` pin on the IC.
+ *  Attach `OUTPUT` to the active-low `OE` pin on the IC.
 
  *  Attach `LATCH` to the `LE` pin on the IC.
 
