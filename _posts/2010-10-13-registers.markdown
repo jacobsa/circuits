@@ -25,8 +25,7 @@ terminals:
     the appropriate value and then bring this momentarily high, then low again.
     Keep it low to retain the value.
 
-This seems very easy to build with a 74373 transparent latch chip like [this
-one] [74373]:
+This seems very easy to build with a [74373 transparent latch] [74373] IC:
 
  *  `D0-7` are just the inputs to the IC.
 
