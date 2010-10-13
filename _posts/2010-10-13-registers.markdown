@@ -28,4 +28,15 @@ inputs:
 This seems very easy to build with a 74373 transparent latch chip like [this
 one] [farnell 373]:
 
+ *  `D0-7` are just the inputs to the IC.
+
+ *  Invert `OUTPUT` and attach its value to the active-low `OE` pin on the IC.
+
+ *  Attach `LATCH` to the `LE` pin on the IC.
+
+ *  Connect the IC's outputs (`Q0-7`) to its inputs. If I understand correctly,
+    this won't cause any problems because when `OUTPUT` is low the outputs are
+    high impedance, and when it's high you should have the register latched
+    anyway.
+
 [farnell 373]: http://au.farnell.com/nxp/74hct373n/74hct-cmos-74hct373-dip20-5v/dp/382358
