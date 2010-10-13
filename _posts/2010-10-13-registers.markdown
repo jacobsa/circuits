@@ -24,3 +24,8 @@ inputs:
  *  `LATCH` -- when you want to write to the register, ensure the bus contains
     the appropriate value and then bring this momentarily high, then low again.
     Keep it low to retain the value.
+
+This seems very easy to build with a 74373 transparent latch chip like [this
+one] [farnell 373]:
+
+[farnell 373]: http://au.farnell.com/nxp/74hct373n/74hct-cmos-74hct373-dip20-5v/dp/382358
