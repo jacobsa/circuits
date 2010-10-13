@@ -43,10 +43,11 @@ The latch IC acts both as the register itself and as a bus transceiver.
 
 I think it would be cool to have each register board also contain an 8-bit LED
 display of its current value for debugging purposes, especially when I'm first
-building system. To do that the latch IC needs to always output though, which
-means I'll need a separate buffer, like the [74245 bus transceiver] [74245]. It
-seems sufficient to put the buffer between the latch IC's outputs and its
-inputs, and to connect the LEDs between the latch IC's outputs and the buffer.
+building the system. To do that the latch IC needs to always output its
+contents though, which means I'll need a separate buffer, like the [74245 bus
+transceiver] [74245]. It seems sufficient to put the buffer between the latch
+IC's outputs and its inputs, and to connect the LEDs between the latch IC's
+outputs and the buffer.
 
 [74373]: http://au.farnell.com/nxp/74hct373n/74hct-cmos-74hct373-dip20-5v/dp/382358
 [74245]: http://au.farnell.com/texas-instruments/sn74hct245n/bus-transceiver-octal-74hct245/dp/9591931
