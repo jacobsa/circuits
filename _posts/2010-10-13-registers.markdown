@@ -25,7 +25,7 @@ terminals:
     the appropriate value and then bring this momentarily high, then low again.
     Keep it low to retain the value.
 
-This seems very easy to build with a [74373 transparent latch] [74373] IC:
+This seems very easy to build with a [74573 transparent latch] [74573] IC:
 
  *  `D0-7` are just the inputs to the IC.
 
@@ -48,5 +48,5 @@ transceiver] [74245]. It seems sufficient to put the buffer between the latch
 IC's outputs and its inputs, and to connect the LEDs between the latch IC's
 outputs and the buffer.
 
-[74373]: http://au.farnell.com/nxp/74hct373n/74hct-cmos-74hct373-dip20-5v/dp/382358
+[74573]: http://au.farnell.com/nxp/74hct573n/74hct-cmos-74hct573-dip20-5v/dp/382449
 [74245]: http://au.farnell.com/texas-instruments/sn74hct245n/bus-transceiver-octal-74hct245/dp/9591931
