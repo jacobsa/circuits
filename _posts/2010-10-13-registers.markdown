@@ -48,5 +48,9 @@ transceiver] [74245]. It seems sufficient to put the buffer between the latch
 IC's outputs and its inputs, and to connect the LEDs between the latch IC's
 outputs and the buffer.
 
+Here's a diagram:
+
+![8-bit register with LEDs](/circuits/images/8_bit_register_with_leds.png)
+
 [74573]: http://au.farnell.com/nxp/74hct573n/74hct-cmos-74hct573-dip20-5v/dp/382449
 [74245]: http://au.farnell.com/texas-instruments/sn74hct245n/bus-transceiver-octal-74hct245/dp/9591931
