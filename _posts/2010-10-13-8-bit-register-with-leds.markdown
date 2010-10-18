@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Registers
+title: 8-bit Register with LEDs
 ---
 
 ![8-bit register with LEDs](/circuits/images/8_bit_register_with_leds.png)
