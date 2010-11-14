@@ -3,6 +3,12 @@ layout: post
 title: 8-bit Register with LEDs
 ---
 
+*Update:* After looking through a copy of [Computer Organization & Design]
+[coad] that I got for $2 at [Gould's] [goulds], I realize that a flip-flop
+(which is clock edge triggered) would be a better choice than a latch (which is
+level triggered, and more complicated to deal with in a large system). A good
+choice seems to be the [74374] [74374].
+
 ![8-bit register with LEDs](/circuits/images/8_bit_register_with_leds.png)
 
 Just for fun, I'm working on building a basic CPU. At this point I think it
@@ -52,3 +58,6 @@ outputs and the buffer.
 
 [74573]: http://au.farnell.com/nxp/74hct573n/74hct-cmos-74hct573-dip20-5v/dp/382449
 [74245]: http://au.farnell.com/texas-instruments/sn74hct245n/bus-transceiver-octal-74hct245/dp/9591931
+[74374]: http://au.element14.com/fairchild-semiconductor/mm74hct374n/74hct-cmos-74hct374-dip20-5-5v/dp/1014009
+[coad]: http://www.amazon.com/Computer-Organization-Design-Third-Architecture/dp/1558606041/ref=tmm_pap_title_1
+[goulds]: http://www.gouldsbooks.com.au/
