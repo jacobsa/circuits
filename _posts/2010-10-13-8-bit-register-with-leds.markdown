@@ -3,11 +3,11 @@ layout: post
 title: 8-bit Register with LEDs
 ---
 
-*Update:* After looking through a copy of [Computer Organization & Design]
-[coad] that I got for $2 at [Gould's] [goulds], I realize that a flip-flop
-(which is clock edge triggered) would be a better choice than a latch (which is
-level triggered, and more complicated to deal with in a large system). A good
-choice seems to be the [74374] [74374].
+*Update:* After looking through a copy of [Computer Organization and
+Design] [coad] that I got for $2 at [Gould's] [goulds], I realize that a
+flip-flop (which is clock edge triggered) would be a better choice than a latch
+(which is level triggered, and more complicated to deal with in a large
+system). A good choice seems to be the [74374] [74374].
 
 ![8-bit register with LEDs](/circuits/images/8_bit_register_with_leds.png)
 
