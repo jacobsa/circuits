@@ -66,4 +66,28 @@ Here's the control logic:
 
  6. Store the jump target into `PC`.
 
+**TODO**: Check on some timing issues:
+
+ *  Make sure the SRAM's propogation delay is higher than its address input's
+    required hold time; otherwise incrementing `PC` while reading an
+    instruction byte will be unstable.
+
+ *  Make sure the SRAM's propogation delay is higher than the register's hold
+    time plus all of the propogation delays involved in setting register
+    control signals such as `InsAWrite`. Otherwise, we won't load well-defined
+    values into the registers from memory.
+
+ *  Make sure the mux's propogation delay is higher than the SRAM's address
+    hold time requirement; otherwise we won't have a well-defined address in
+    the transition from state 2 to state 3.
+
+ *  Make sure that the propogation delay for turning off `MemRead` is greater
+    than the hold time for the registers; otherwise we won't get a well-defined
+    value in `Val`.
+
+ *  Consider having `PCSel=0` be defined to continue into state 3,
+    `AddrSel=0` into state 5, and `PCSel=1` into state 6, so that the control
+    of the relevant mux is guaranteed not to change near the assertion of the
+    appropriate write signal.
+
 [coad]: http://www.amazon.com/Computer-Organization-Design-Third-Architecture/dp/1558606041/ref=tmm_pap_title_1
