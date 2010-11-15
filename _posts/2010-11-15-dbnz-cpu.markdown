@@ -66,6 +66,12 @@ Here's the control logic:
 
  6. Store the jump target into `PC`.
 
+I think this can be implemented with a resettable decade counter (actually a
+count-to-6 chip, if such a thing exists) and a few logic gates. The only thing
+that remains is a clock generator and a system to load a program into memory
+and reset the CPU. I'll probably set up an Atmel MCU to do both of these,
+reading the program from a Micro SD card.
+
 **TODO**: Check on some timing issues:
 
  *  Make sure the SRAM's propogation delay is higher than its address input's
