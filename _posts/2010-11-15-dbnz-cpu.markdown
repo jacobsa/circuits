@@ -1,0 +1,17 @@
+---
+layout: post
+title: DBNZ CPU
+---
+
+I've decided to build a CPU that supports only one instruction: `DBNZ`. That
+is, Decrement and Branch if Not Zero. Each instruction consists of two bytes.
+The first gives a memory location whose value should be decremented, and the
+second consists of the memory location from which to fetch the next instruction
+if the result is non-zero.
+
+Following the examples I saw in [Computer Organization and Design] [coad], I've
+sketched out a data path for the CPU:
+
+![DBNZ CPU data path](/circuits/images/dbnz_cpu_data_path.png)
+
+[coad]: http://www.amazon.com/Computer-Organization-Design-Third-Architecture/dp/1558606041/ref=tmm_pap_title_1
