@@ -18,19 +18,19 @@ sketched out a data path for the CPU:
 Some relevant pieces (all registers, adders, and buses are 8 bits wide):
 
  *  `PC` is a register that contains the current byte of the instruction to be
-    fetched. It can be fed from the +1 adder (for incrementing), or from `INS
+    fetched. It can be fed from the +1 adder (for incrementing), or from `Ins
     B` (for branches). The +1 adder is set up to raise a `Halt` signal that
     will halt the external clock circuitry when the CPU jumps to `0xFF`.
 
  *  There is an SRAM unit that can be told to store the supplied write data at
     the given address, or to read the data at the given address. The address is
-    supplied by `PC` (for loading instructions) or `INS A` (for loading values
+    supplied by `PC` (for loading instructions) or `Ins A` (for loading values
     to be decremented).
 
- *  `INS A` holds the first byte of the instruction, i.e. the address of the
+ *  `Ins A` holds the first byte of the instruction, i.e. the address of the
     value to be decremented.
 
- *  `INS B` holds the second byte of the instruction, i.e. the address to jump
+ *  `Ins B` holds the second byte of the instruction, i.e. the address to jump
     to if the result of the decrement is not zero.
 
  *  `Val` holds the value to be decremented, and is set up to send its value
