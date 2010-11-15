@@ -854,7 +854,7 @@ ValWrite}</string>
 
 \f0\fs14 \cf0 AddrSel=0\
 PCWrite\
-ILWrite\
+InsBWrite\
 MemRead}</string>
 					</dict>
 				</dict>
@@ -1093,7 +1093,7 @@ MemRead}</string>
 \f0\fs14 \cf0 PCSel=0\
 AddrSel=1\
 PCWrite\
-IHWrite\
+InsAWrite\
 MemRead}</string>
 					</dict>
 				</dict>
@@ -1149,7 +1149,7 @@ MemRead}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-11-15 20:21:37 +1100</string>
+	<string>2010-11-15 20:31:22 +1100</string>
 	<key>Modifier</key>
 	<string>Aaron Jacobs</string>
 	<key>NotesVisible</key>
