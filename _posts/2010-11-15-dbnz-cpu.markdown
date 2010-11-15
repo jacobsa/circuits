@@ -42,4 +42,28 @@ Here's the control logic:
 
 ![DBNZ CPU control flow](/circuits/images/dbnz_cpu_control_flow.png)
 
+ 1. Set up the memory to read from the address in `PC`, and prepare `PC` to be
+    incremented. (The value from the adder will be stored on the rising edge of
+    `PCWrite`, asserted in the next state.)
+
+ 2. Store the first byte of the instruction into `Ins A` and increment `PC`.
+    (Assuming no large clock skew, there's no race condition here because the
+    hold time required for storing into `Ins A` is much lower than the
+    propogation delay of `PC`, much less that of the SRAM.) Keep `MemRead`
+    asserted with `AddrSel=1` so that the memory outputs the next byte.
+
+ 3. Store the second byte of the instruction into `Ins B` and increment `PC`
+    again. Set up the memory to read from the address in the first byte of the
+    instruction.
+
+ 4. Store the value pointed at by `Ins A` into `Val`. The adder will then
+    output that value minus one. Continue to set `AddrSel=0` so that this can
+    be written back to the memory.
+
+ 5. Write the decremented value back to memory. Set up `PC` to read from `Ins
+    B` in case we jump. If the decrementing logic says that the result is zero,
+    fall through to the next instruction in memory by going to state 1.
+
+ 6. Store the jump target into `PC`.
+
 [coad]: http://www.amazon.com/Computer-Organization-Design-Third-Architecture/dp/1558606041/ref=tmm_pap_title_1
