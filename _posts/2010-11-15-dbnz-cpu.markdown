@@ -10,7 +10,7 @@ second consists of the memory location from which to fetch the next instruction
 if the result is non-zero. Using only this instruction and some self-modifying
 code cleverness, you can write a surprising number of programs.
 
-Following the examples I saw in [Computer Organization and Design] [coad], I've
+Following examples I saw in [Computer Organization and Design] [coad], I've
 sketched out a data path for the CPU:
 
 ![DBNZ CPU data path](/circuits/images/dbnz_cpu_data_path.png)
