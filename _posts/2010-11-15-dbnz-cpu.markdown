@@ -7,7 +7,8 @@ I've decided to build a CPU that supports only one instruction: `DBNZ`. That
 is, Decrement and Branch if Not Zero. Each instruction consists of two bytes.
 The first gives a memory location whose value should be decremented, and the
 second consists of the memory location from which to fetch the next instruction
-if the result is non-zero.
+if the result is non-zero. Using only this instruction and some self-modifying
+code cleverness, you can write a surprising number of programs.
 
 Following the examples I saw in [Computer Organization and Design] [coad], I've
 sketched out a data path for the CPU:
@@ -36,5 +37,9 @@ Some relevant pieces (all registers, adders, and buses are 8 bits wide):
     from an adder that will do the decrementing. The adder is set up to raise
     a `ZeroRes` signal when the result of decrementing is zero; this feeds into
     the control circuitry.
+
+Here's the control logic:
+
+![DBNZ CPU control flow](/circuits/images/dbnz_cpu_control_flow.png)
 
 [coad]: http://www.amazon.com/Computer-Organization-Design-Third-Architecture/dp/1558606041/ref=tmm_pap_title_1
