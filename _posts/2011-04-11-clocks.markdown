@@ -1,0 +1,33 @@
+---
+layout: post
+title: Clocks
+---
+
+After some time off for the wedding, I've started back on the track to build
+the `DBNZ` CPU. It's going to involve a level of complexity I'm not ready for
+yet, so I'm building the components piece by piece to get familiar with them.
+
+First up is clocks. Here's a really simple one based on an inverter with a
+Schmitt trigger, such as the [74HCT14][74HCT14].
+
+![Schmitt trigger oscillator](/circuits/images/schmitt_inverter_clock.png)
+
+If the input to the inverter starts low, then the output is high and slowly
+charges the capacitor through the [RC network][rc]. The output stays stable
+during the charging due to the Schmitt trigger, but once the upper threshold
+voltage is reached it flips, and the capacitor begins discharging. Eventually
+it hits the lower threshold, and starts over again.
+
+The frequency depends on the lower and upper thresholds, which according to the
+datasheet are about 1.8 V and 2.8 V when VCC is 5 V.
+
+Here's a clock that uses a [555 timer][555] and has a reset input.
+
+![555 clock](/circuits/images/suppresable_clock.png)
+
+Bring the reset# input low to immediately bring the clock output low and keep
+it there.
+
+[74HCT14]: http://www.futurlec.com.au/Price.jsp?part_no=74HCT14
+[rc]: http://en.wikipedia.org/wiki/RC_network
+[555]: http://www.kpsec.freeuk.com/555timer.htm
