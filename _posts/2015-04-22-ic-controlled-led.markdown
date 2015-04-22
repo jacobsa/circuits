@@ -17,7 +17,21 @@ independently with an IC containing multiple transistors with a common emitter
 such as the [ULN2003A][], which appears to be a very common source of NPN
 transistors in TTL and CMOS designs.
 
+Here's another attempt, using that IC:
+
+![New circuit](/circuits/images/5v_ic_controlled_led_2nd_try.png)
+
+This circuit assumes that the LED has a forward voltage drop of 1.8 V, and
+operates at 20 mA. `LED_ENABLE` is the output of a logic IC running at 5 V.
+
+A few things to note:
+
+*   We can directly connect the logic IC output to the base pin, because the
+    ULN2003A has an internal current-limiting resistor for the base. (See
+    [this][so] StackExchange answer for why the internal resistor always has the
+    right value.)
+
 [prev]: http://jacobsa.github.io/circuits/2010/10/03/ic-controlled-led.html
 [kpsec]: http://electronicsclub.info/transistorcircuits.htm
 [ULN2003A]: http://www.st.com/web/en/resource/technical/document/datasheet/CD00001244.pdf
-[led]: http://led.linear1.org/1led.wiz
+[so]: http://electronics.stackexchange.com/a/166065/72857
