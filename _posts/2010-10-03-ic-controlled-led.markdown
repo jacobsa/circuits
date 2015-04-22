@@ -3,6 +3,11 @@ layout: post
 title: IC-controlled LED
 ---
 
+**Update**: Make sure to see the [new post][] on this topic, containing a better
+circuit.
+
+[new post]: http://jacobsa.github.io/circuits/2015/04/22/ic-controlled-led.html
+
 Some ICs, like the 555 timer, are able to source enough current to drive an
 LED. However many aren't, and instead a transistor can be used to switch
 current directly from a voltage source:
