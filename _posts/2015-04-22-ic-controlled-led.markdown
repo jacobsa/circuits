@@ -22,16 +22,15 @@ Here's another attempt, using that IC:
 ![New circuit](/circuits/images/5v_ic_controlled_led_2nd_try.png)
 
 This circuit assumes that the LED has a forward voltage drop of 1.8 V, and
-operates at 20 mA. `LED_ENABLE` is the output of a logic IC running at 5 V.
+operates at 20 mA. `LED_ENABLE` is the output of a logic IC running at 5 V. See
+[this][se] StackExchange question for discussion.
 
 A few things to note:
 
 *   We can directly connect the logic IC output to the base pin, because the
-    ULN2003A has an internal current-limiting resistor for the base. (See
-    [this][so] StackExchange answer for why the internal resistor always has the
-    right value.)
+    ULN2003A has an internal current-limiting resistor for the base.
 
 [prev]: http://jacobsa.github.io/circuits/2010/10/03/ic-controlled-led.html
 [kpsec]: http://electronicsclub.info/transistorcircuits.htm
 [ULN2003A]: http://www.st.com/web/en/resource/technical/document/datasheet/CD00001244.pdf
-[so]: http://electronics.stackexchange.com/a/166065/72857
+[se]: http://electronics.stackexchange.com/q/166064/72857
