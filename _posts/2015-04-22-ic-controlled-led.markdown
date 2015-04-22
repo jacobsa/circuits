@@ -30,6 +30,10 @@ A few things to note:
 *   We can directly connect the logic IC output to the base pin, because the
     ULN2003A has an internal current-limiting resistor for the base.
 
+*   The resistor value is chosen by dividing the voltage across the resistor (5
+    V for the supply, minus 1.8 V for the LED, minus 0.9 V for the
+    collector-emitter voltage at saturation) by the LED current.
+
 [prev]: http://jacobsa.github.io/circuits/2010/10/03/ic-controlled-led.html
 [kpsec]: http://electronicsclub.info/transistorcircuits.htm
 [ULN2003A]: http://www.st.com/web/en/resource/technical/document/datasheet/CD00001244.pdf
