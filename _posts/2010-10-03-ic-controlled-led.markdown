@@ -16,4 +16,4 @@ resistor using an [LED calculator] [led], and the 5.6 kΩ resistor using the
 "Choosing a suitable NPN transistor" section [here] [kpsec].
 
 [led]: http://led.linear1.org/1led.wiz
-[kpsec]: http://www.kpsec.freeuk.com/trancirc.htm
+[kpsec]: http://electronicsclub.info/transistorcircuits.htm
