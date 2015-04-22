@@ -36,5 +36,5 @@ A few things to note:
 
 [prev]: http://jacobsa.github.io/circuits/2010/10/03/ic-controlled-led.html
 [kpsec]: http://electronicsclub.info/transistorcircuits.htm
-[ULN2003A]: http://www.st.com/web/en/resource/technical/document/datasheet/CD00001244.pdf
+[ULN2003A]: http://www.ti.com/lit/ds/symlink/uln2003a.pdf
 [se]: http://electronics.stackexchange.com/q/166064/72857
