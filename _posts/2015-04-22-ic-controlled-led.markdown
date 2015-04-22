@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: IC-controlled LED (Revisited)
